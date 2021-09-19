@@ -15,7 +15,7 @@ public class ConnectionFactory {
 			throw new SQLException(e);
 		}
 		
-		return DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "root");
+		return DriverManager.getConnection("jdbc:mysql://localhost/fj21?useTimezone=true&serverTimezone=UTC", "root", "root");
 	}
 
 }
