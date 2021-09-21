@@ -8,6 +8,6 @@
 </head>
 <body>
 	<hr />
-	Copyright 2020 - Todos os direitos reservados
+	Copyright 2021 - Todos os direitos reservados
 </body>
 </html>
