@@ -16,7 +16,7 @@ public class ControllerServlet extends HttpServlet {
 
 		String parametro = req.getParameter("logica");
 		String nomeDaClasse = "br.com.caelum.mvc.logica." + parametro;
-		// System.out.println(nomeDaClasse);
+		//System.out.println(nomeDaClasse);
 
 		try {
 			Class classe = Class.forName(nomeDaClasse);

@@ -11,22 +11,22 @@
 	<%@	taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 	<c:import	url="cabecalho.jsp"	/>
 	
-	<!--  cria o DAO -->
-	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao" />
-
 	<table>
 		<!--  percorre contatos montando as linhas da tabela -->
-		<c:forEach var="contato" items="${dao.lista}">
+		<c:forEach var="contato" items="${contatos}">
 			<tr>
 				<td>${contato.nome}</td>
 				
 				<!-- lógica do email -->
-				<td><c:if test="${not empty contato.email}">
+				<td>
+					<c:if test="${not empty contato.email}">
 						<a href="mailto:${contato.email}"> ${contato.email}</a>
 					</c:if> 
+					
 					<c:if test="${empty	contato.email}">
-										E-mail	não	informado
-					</c:if></td>
+						E-mail	não	informado
+					</c:if>
+				</td>
 					
 				<td>${contato.endereco}</td>
 				<td><fmt:formatDate	value="${contato.dataNascimento.time}"
